@@ -16,6 +16,7 @@ csv_writer = csv.writer(csv_file)
 try:
     for x in range(2660):
         data = ser.readline().decode().strip()
+        print(data)
         csv_writer.writerow([data])
     else:
         print("Done Recording!")
